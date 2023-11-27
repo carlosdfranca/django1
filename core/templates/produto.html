@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ produto.nome }}</title>
+</head>
+<body>
+    <h1>Produto: {{ produto.nome }}</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Preço</th>
+                <th>Estoque</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ produto.preco }}</td>
+                <td>{{ produto.estoque }}</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

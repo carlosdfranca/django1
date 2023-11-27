@@ -5,6 +5,29 @@
     <title>Homepage</title>
 </head>
 <body>
-    <h1>Essa vai ser a Homepage do meu site</h1>
+    <h1>{{ usuario }}</h1>
+    
+    <h2>{{ curso }}</h2>
+
+    <p>{{ outro }}</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Produto</th>
+                <th>Preço</th>
+                <th>Estoque</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for produto in produtos %}
+                <tr>
+                    <td><a href="{% url 'produto' produto.pk %}">{{ produto.nome }}</a></td>
+                    <td>{{ produto.preco }}</td>
+                    <td>{{ produto.estoque }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 </body>
 </html>
